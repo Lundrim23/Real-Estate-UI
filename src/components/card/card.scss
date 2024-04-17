@@ -1,3 +1,5 @@
+@import '../../responsive.scss';
+
 .card {
   display: flex;
   gap: 20px;
@@ -5,6 +7,10 @@
   .imageContainer {
     flex: 2;
     height: 200px;
+
+    @include md {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -36,6 +42,7 @@
         scale: 1.01;
       }
     }
+
     .address {
       font-size: 14px;
       display: flex;
@@ -66,8 +73,9 @@
         .feature {
           display: flex;
           align-items: center;
-          background-color: whitesmoke;
           gap: 5px;
+          background-color: whitesmoke;
+          padding: 5px;
           border-radius: 5px;
         }
       }
